@@ -7,7 +7,7 @@ window.onload = function() {
   //Numero del centro
   const randomNumber = document.querySelector("#number");
   let randomCard = () => {
-    let results = Math.floor(Math.random() * 12 + 2);
+    let results = Math.floor(Math.random() * 10 + 4);
     if (results == 11) results = "J";
     if (results == 12) results = "Q";
     if (results == 13) results = "K";

@@ -2,6 +2,8 @@
 
 #carta {
   height: 500px;
+  width: 350px;
+  border-radius: 5%;
 }
 /* Se asigna a todos los h1 hijos de figura 2 */
 #figura2 > h1 {
