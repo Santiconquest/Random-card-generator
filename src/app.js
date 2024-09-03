@@ -39,13 +39,28 @@ window.onload = function() {
     figuraSup.style.color = "red";
     figuraInf.style.color = "red";
   }
+
+  //Agregando boton
+  const boton = document.createElement("button");
+  boton.innerText = "Actualizar carta";
+  document.body.appendChild(boton);
+
+  boton.addEventListener("click", event => {
+    location.reload(event);
+  });
+
+  // Agrego funcion para redimensionar carta
+  function redimensionar() {
+    console.log("redimensione");
+    let ancho = document.getElementById("ancho").value;
+    console.log("ancho", ancho);
+    let alto = document.getElementById("alto").value;
+    console.log("alto", alto);
+    //Llamo al elemento carta para modificar ancho y alto
+    document.getElementById("carta").style.width = `${ancho}px`;
+    document.getElementById("carta").style.height = `${alto}px`;
+  }
+  document.getElementById("redimensionarCarta").addEventListener("click", e => {
+    redimensionar();
+  });
 };
-
-//Agregando boton
-const boton = document.createElement("button");
-boton.innerText = "Actualizar carta";
-document.body.appendChild(boton);
-
-boton.addEventListener("click", event => {
-  location.reload();
-});
